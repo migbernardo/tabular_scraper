@@ -27,7 +27,7 @@ class Webpage:
             return np.array(raw, dtype='object')
         # return an error message if the page doesn't allow scraping or there's some connection error
         except:
-            return "Connection error, the page might not allow scrapping!"
+            return "Connection error, the page might not allow scraping!"
 
     # method similar to raw() but exports data as a .csv file for later use
     def raw_csv(self):
@@ -39,7 +39,7 @@ class Webpage:
             # save file named with its time stamp
             return pd.DataFrame(raw).to_csv(self.name + '_' + datetime.now().strftime("%d_%m_%Y_%H_%M") + '.csv')
         except:
-            return "Connection error, the page might not allow scrapping!"
+            return "Connection error, the page might not allow scraping!"
 
 
 if __name__ == '__main__':
