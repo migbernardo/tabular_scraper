@@ -25,7 +25,7 @@ class Webpage:
                 # append each parsed tag according to the chosen separators to raw list
                 raw.append(tag.get_text(separator=self.sep1).split(self.sep2))
             return np.array(raw, dtype='object')
-        # return an error message if the page doesn't allow scrapping or there's some connection error
+        # return an error message if the page doesn't allow scraping or there's some connection error
         except:
             return "Connection error, the page might not allow scrapping!"
 
